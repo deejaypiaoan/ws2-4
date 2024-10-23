@@ -1,0 +1,498 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.7) url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* Style the header */
+#header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f97937;
+  /* Updated color */
+  padding: 10px;
+  position: relative;
+  background-size: cover;
+}
+
+.header img.logo {
+  width: 250px;
+  /* Adjust size as necessary */
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header img {
+  width: 100px;
+  height: auto;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .dj-pic,
+.header .atty-pic {
+  width: 80px;
+  height: auto;
+  max-height: 100px;
+  border-radius: 50%;
+  margin-left: 10px;
+  /* Adjust the space between the images */
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .dj-pic,
+.header .atty-pic {
+  width: 80px;
+  height: auto;
+  max-height: 100px;
+  border-radius: 50%;
+  margin-left: 10px;
+  /* Adjust the space between the images */
+}
+
+.logo {
+  margin-right: auto;
+}
+
+
+.header img {
+  max-height: 60px;
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'left middle right';
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'left middle right';
+  grid-template-columns: 0.3fr 2fr 0.5fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+/* Left, Middle, and Right sections */
+.left {
+  grid-area: left;
+  background-color: #ffefc1;
+  padding: 5px;
+  border-radius: 10px;
+  align-self: start;
+  /* Ensures the background does not stretch to fill the entire grid area */
+  width: fit-content;
+  /* Ensures the width only extends as far as the content */
+  max-width: 100%;
+  /* Prevents it from exceeding its container's width */
+}
+
+
+.middle {
+  grid-area: middle;
+  background-color: #f97937;
+  border-radius: 10px;
+  align-self: start;
+  /* Ensures the background does not stretch to fill the entire grid area */
+  width: fit-content;
+  /* Ensures the width only extends as far as the content */
+  max-width: 100%;
+  /* Prevents it from exceeding its container's width */
+  padding: 0;
+}
+
+
+
+
+.right {
+  grid-area: right;
+  background-color: #ffefc1;
+  padding: 5px;
+  border-radius: 10px;
+  align-self: start;
+  /* Ensures the background does not stretch to fill the entire grid area */
+  width: fit-content;
+  /* Ensures the width only extends as far as the content */
+  max-width: 100%;
+  /* Prevents it from exceeding its container's width */
+}
+
+
+/* Toppings and Flavor Flex Containers */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0px;
+  margin-top: 0px;
+}
+
+
+#flavor {
+  margin-bottom: 10px;
+}
+
+.gallery {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.gallery img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Toppings container grid to stack 2 per row */
+/* Toppings container grid to stack 2 per row */
+.toppings {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Two columns of equal width */
+  gap: 10px;
+  /* Adjust gap between toppings */
+  color: #333;
+}
+
+/* Description styling for toppings */
+.desctopping {
+  margin-top: 0px;
+  position: relative;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Flexbox for quantity controls */
+.update-quantity {
+  display: flex;
+  justify-content: space-between;
+  /* Space buttons evenly */
+  align-items: center;
+  gap: 0px;
+}
+
+/* Styling for topping input elements */
+#topping1,
+#topping2,
+#topping3,
+#topping4,
+#topping5,
+#topping6 {
+  font-size: 14px;
+  text-align: center;
+  /* Center align the number input */
+  width: 40px;
+  /* Fixed width for uniformity */
+}
+
+
+
+/* Button styling */
+button {
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Optional: Customize the overall topping item container */
+.topping-item {
+  display: flex;
+  flex-direction: column;
+  /* Stack the label and quantity controls */
+  align-items: center;
+  /* Center elements horizontally */
+  margin-bottom: 20px;
+  /* Space below each topping item */
+}
+
+.order-summary {
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: center;
+  /* Center the items horizontally */
+  align-items: center;
+  /* Center align items vertically */
+  margin-top: 20px;
+  /* Adjust top margin if needed */
+}
+
+.total-container {
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: space-between;
+  /* Space between the total and button */
+  width: 100%;
+  /* Take the full width of the parent */
+}
+
+#total {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  /* Remove default margin */
+}
+
+h1,
+#grandtotal {
+  color: #ffffff;
+  padding-top: 0px;
+  margin: 0;
+  /* Remove default margin */
+}
+
+#order {
+  margin-left: 20px;
+  /* Optional spacing between total and button */
+  padding: 10px 20px;
+  /* Padding for the button */
+}
+
+
+
+
+#pizza-details {
+  margin: 0 auto;
+  /* Centers the div horizontally */
+  text-align: left;
+  /* Keeps the text inside left-aligned */
+  width: 20%;
+  /* Ensures the div stays within the middle grid, adjust as necessary */
+  padding: 0px;
+  /* Adds some internal space */
+  margin-bottom: 30px;
+  /* Adds space below the div */
+  white-space: nowrap;
+  /* Prevents text from wrapping to a new line */
+  overflow: show;
+  /* Prevents overflowing text from breaking layout */
+}
+
+#order {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#order:hover {
+  background-color: #979797;
+  transform: scale(1.05);
+}
+
+
+button,
+#order :focus {
+  outline: black;
+}
+
+button,
+#order :hover {
+  background-color: #cc5200;
+}
+
+input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+#flavor,
+#size {
+  justify-content: space-evenly;
+}
+
+/* Ensure the size container is stacked vertically */
+#size {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.gallery {
+  text-align: center;
+  margin: 0px;
+  border: 2px solid #ff6600;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 0px;
+}
+
+.gallery img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.desc {
+  margin: 0px;
+  font-size: 15px;
+  color: #333;
+  padding: 0;
+}
+
+.descsize {
+  font-size: 13px;
+  color: #333;
+  padding: 0;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black background with transparency */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-areas:
+      'header'
+      'middle'
+      'left'
+      'right';
+    grid-template-columns: 1fr;
+  }
+
+  .left,
+  .middle,
+  .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery img {
+    width: 80px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

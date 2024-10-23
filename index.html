@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILOCOS EMPANADA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleimg.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header grid-item" id="header">
+          <img src="logo.png" alt="Logo" class="logo">
+          <div class="image-container">
+            <img src="piaoan_logo.jpg" alt="DJ" class="dj-pic">
+            <img src="maala_logo.jpg" alt="ATTY" class="atty-pic">
+          </div>
+        </div>
+      
+      
+    
+  <div class="left grid-item" id="left">
+    <h3>Add Toppings</h3>
+    <div class="toppings">
+      <div class="gallery">
+        <label for="topping1">
+          <img class="imgflavor" src="img1.png" alt="Topping 1" width="100" height="auto">
+          <div class="desctopping"><b>Egg</b> <br> Add Php 10</div>
+        </label>
+        <div class="update-quantity">
+          <button class="decrease" onclick="updateQuantity('topping1', false)">-</button>
+          <input type="number" id="topping1" value="0" min="0" readonly>
+          <button class="increase" onclick="updateQuantity('topping1', true)">+</button>
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <label for="topping2">
+          <img class="imgflavor" src="img2.png" alt="Topping 2" width="100" height="auto">
+          <div class="desctopping"><b>Longganisa</b> <br> Add Php 15</div>
+        </label>
+        <div class="update-quantity">
+          <button class="decrease" onclick="updateQuantity('topping2', false)">-</button>
+          <input type="number" id="topping2" value="0" min="0" readonly>
+          <button class="increase" onclick="updateQuantity('topping2', true)">+</button>
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <label for="topping3">
+          <img class="imgflavor" src="img3.png" alt="Topping 3" width="100" height="auto">
+          <div class="desctopping"><b>Beef Meat</b> <br> Add Php 30</div>
+        </label>
+        <div class="update-quantity">
+          <button class="decrease" onclick="updateQuantity('topping3', false)">-</button>
+          <input type="number" id="topping3" value="0" min="0" readonly>
+          <button class="increase" onclick="updateQuantity('topping3', true)">+</button>
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <label for="topping4">
+          <img class="imgflavor" src="img4.png" alt="Topping 4" width="100" height="auto">
+          <div class="desctopping"><b>Vegetables</b> <br> Add Php 10</div>
+        </label>
+        <div class="update-quantity">
+          <button class="decrease" onclick="updateQuantity('topping4', false)">-</button>
+          <input type="number" id="topping4" value="0" min="0" readonly>
+          <button class="increase" onclick="updateQuantity('topping4', true)">+</button>
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <label for="topping5">
+          <img class="imgflavor" src="img5.png" alt="Topping 5" width="100" height="auto">
+          <div class="desctopping"><b>Crunchy Bagnet Bits</b> <br> Add Php 20</div>
+        </label>
+        <div class="update-quantity">
+          <button class="decrease" onclick="updateQuantity('topping5', false)">-</button>
+          <input type="number" id="topping5" value="0" min="0" readonly>
+          <button class="increase" onclick="updateQuantity('topping5', true)">+</button>
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <label for="topping6">
+          <img class="imgflavor" src="img6.png" alt="Topping 6" width="100" height="auto">
+          <div class="desctopping"><b>Sisig Meat</b> <br> Add Php 35</div>
+        </label>
+        <div class="update-quantity">
+          <button class="decrease" onclick="updateQuantity('topping6', false)">-</button>
+          <input type="number" id="topping6" value="0" min="0" readonly>
+          <button class="increase" onclick="updateQuantity('topping6', true)">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="middle grid-item">
+    <div class="order-summary">
+        <p id="total">Grand Total: <span id="grandtotal">₱ 0.00</span></p>
+    </div>
+    <p><button id="order" onclick="submitorder()">Place Order</button></p>
+
+
+        <div id="pizza-details"></div>
+        <h3>Select Flavor</h3>
+        <div class="flex-container" id="flavor">
+        <div class="gallery">
+            <input type="radio" name="pizzaflavor" id="hawaiian" data-name="Regular" value="55" onclick="updateGrandTotal(); pizzaboy()">
+            <label for="hawaiian">
+                <img class="imgflavor" id="ihawaiian" src="pic1.jpg" alt="Regular" width="200" height="auto">
+                <div class="desc"><b>Regular</b><br> Php 55</div>
+            </label>
+        </div>
+        <div class="gallery">
+            <input type="radio" name="pizzaflavor" id="pepperoni" data-name="Special Eggless" value="65" onclick="updateGrandTotal(); pizzaboy()">
+            <label for="pepperoni">
+                <img class="imgflavor" id="ipepperoni" src="pic2.jpg" alt="Special Eggless" width="200" height="auto">
+                <div class="desc"><b>Special Eggless</b><br> Php 65</div>
+            </label>
+        </div>
+        <div class="gallery">
+            <input type="radio" name="pizzaflavor" id="hamandcheese" data-name="Special" value="75" onclick="updateGrandTotal(); pizzaboy()">
+            <label for="hamandcheese">
+                <img class="imgflavor" id="ihamandcheese" src="pic3.jpg" alt="Special" width="200" height="auto">
+                <div class="desc"><b>Special</b> <br> Php 75</div>
+            </label>
+        </div>
+        <div class="gallery">
+            <input type="radio" name="pizzaflavor" id="supreme" data-name="Double Egg" value="85" onclick="updateGrandTotal(); pizzaboy()">
+            <label for="supreme">
+                <img class="imgflavor" id="isupreme" src="pic4.jpg" alt="Double Egg" width="200" height="auto">
+                <div class="desc"><b>Double Egg</b> <br> Php 85</div>
+            </label>
+        </div>
+        <div class="gallery">
+            <input type="radio" name="pizzaflavor" id="veggie" data-name="Extra Special" value="90" onclick="updateGrandTotal(); pizzaboy()">
+            <label for="veggie">
+                <img class="imgflavor" id="iveggie" src="pic5.jpg" alt="Extra Special" width="200" height="auto">
+                <div class="desc"><b>Extra Special</b> <br> Php 90</div>
+            </label>
+        </div>
+        <div class="gallery">
+            <input type="radio" name="pizzaflavor" id="bbqchicken" data-name="Super Special" value="130" onclick="updateGrandTotal(); pizzaboy()">
+            <label for="bbqchicken">
+                <img class="imgflavor" id="ibbqchicken" src="pic6.jpg" alt="Super Special" width="200" height="auto">
+                <div class="desc"><b>Super Special</b> <br> Php 130</div>
+            </label>
+        </div>
+        <div class="gallery">
+            <input type="radio" name="pizzaflavor" id="meatlover" data-name="Ultimate" value="130" onclick="updateGrandTotal(); pizzaboy()">
+            <label for="meatlover">
+                <img class="imgflavor" id="imeatlover" src="pic7.jpg" alt="Ultimate" width="200" height="auto">
+                <div class="desc"><b>Ultimate</b> <br> Php 130</div>
+            </label>
+        </div>
+        <div class="gallery">
+            <input type="radio" name="pizzaflavor" id="fourcheese" data-name="Salted Egg Bagnet" value="140" onclick="updateGrandTotal(); pizzaboy()">
+            <label for="fourcheese">
+                <img class="imgflavor" id="ifourcheese" src="pic8.jpg" alt="Salted Egg Bagnet" width="200" height="auto">
+                <div class="desc"><b>Salted Egg Bagnet</b> <br> Php 140</div>
+            </label>
+        </div>
+    </div>
+
+    </div>
+    <div class="right grid-item">
+        <h3>Select Size</h3>
+        <div class="flex-container" id="size">
+            <div class="gallery">
+                <input type="radio" name="pizzasize" id="small" value="0" onclick="pizzaboy()">
+                <label for="small">
+                    <img class="imgsize" src="size.png" alt="Small" width="140" height="auto">
+                    <div class="desc descsize"><b>Normal</b> <br> Php 0.00</div>
+                </label>
+            </div>
+            <div class="gallery">
+                <input type="radio" name="pizzasize" id="medium" value="50" onclick="pizzaboy()">
+                <label for="medium">
+                    <img class="imgsize" src="size.png" alt="Medium" width="170" height="auto">
+                    <div class="desc descsize"><b>Large</b> <br> Add Php 50.00</div>
+                </label>
+            </div>
+            <div class="gallery">
+                <input type="radio" name="pizzasize" id="large" value="100" onclick="pizzaboy()">
+                <label for="large">
+                    <img class="imgsize" src="size.png" alt="Large" width="200" height="auto">
+                    <div class="desc descsize"><b>Xtra Large</b> <br> Add Php 100.00</div>
+                </label>
+            </div>        
+        </div>
+
+
+      <!-- Pop-up Form Container -->
+<div id="popupForm" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Enter Delivery Details</h2>
+        <form id="deliveryForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+  
+
+
+
+    </div>
+
+</div>
+
+</body>
+</html>
